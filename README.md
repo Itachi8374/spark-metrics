@@ -9,6 +9,12 @@ This is a repository for ApacheSpark metrics related custom classes (e.g. source
 
 For further information how we use this extension and the Prometheus sink at [Banzai Cloud](https://banzaicloud.com/) please read these posts:
 
+## How to build spark-metrics
+    
+```bash
+sbt assembly
+```
+
 * [Monitoring Apache Spark with Prometheus](https://banzaicloud.com/blog/spark-monitoring/)<br/>
 * [Monitoring multiple federated clusters with Prometheus - the secure way](https://banzaicloud.com/blog/prometheus-federation/)<br/>
 * [Application monitoring with Prometheus and Pipeline](https://banzaicloud.com/blog/prometheus-application-monitoring/)<br/>
