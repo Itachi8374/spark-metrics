@@ -19,7 +19,6 @@ lazy val root = (project in file("."))
     licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0")),
     scalaVersion := scala212,
     crossScalaVersions := supportedScalaVersions,
-    version      := "3.5-1.0.0",
     libraryDependencies ++= Seq(
       "io.prometheus" % "simpleclient" % ioPrometheusVersion,
       "io.prometheus" % "simpleclient_dropwizard" % ioPrometheusVersion,
@@ -33,12 +32,11 @@ lazy val root = (project in file("."))
       // Described in https://issues.apache.org/jira/browse/SPARK-18162?focusedCommentId=15818123#comment-15818123
       // "org.eclipse.jetty" % "jetty-servlet"  % "9.4.18.v20190429" % Test
       ),
-    testOptions in Test := Seq(Tests.Argument(TestFrameworks.JUnit, "-a"))
+    Test/testOptions := Seq(Tests.Argument(TestFrameworks.JUnit, "-a"))
   )
 
 
 publishMavenStyle := true
-useGpg := true
 
 // Add sonatype repository settings
 publishTo := Some(
