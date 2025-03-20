@@ -1,4 +1,4 @@
-lazy val scala212 = "2.12.19"
+lazy val scala212 = "2.12.15"
 lazy val supportedScalaVersions = List(scala212)
 lazy val ioPrometheusVersion = "0.16.0"
 
