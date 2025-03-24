@@ -1,7 +1,7 @@
-lazy val scala212 = "2.12.18"
+lazy val scala212 = "2.12.15"
 lazy val scala213 = "2.13.13"
 lazy val supportedScalaVersions = List(scala212, scala213)
-lazy val ioPrometheusVersion = "0.16.0"
+lazy val ioPrometheusVersion = "0.7.0"
 
 lazy val root = (project in file("."))
   .settings(
@@ -24,9 +24,9 @@ lazy val root = (project in file("."))
       "io.prometheus" % "simpleclient_dropwizard" % ioPrometheusVersion,
       "io.prometheus" % "simpleclient_common" % ioPrometheusVersion,
       "io.prometheus" % "simpleclient_pushgateway" % ioPrometheusVersion,
-      "io.dropwizard.metrics" % "metrics-core" % "4.2.21" % Provided,
-      "io.prometheus.jmx" % "collector" % "0.20.0",
-      "org.apache.spark" %% "spark-core" % "3.5.1" % Provided,
+      "io.dropwizard.metrics" % "metrics-core" % "4.2.19" % Provided,
+      "io.prometheus.jmx" % "collector" % "0.12.0",
+      "org.apache.spark" %% "spark-core" % "3.5.0" % Provided,
       "com.github.sbt" % "junit-interface" % "0.13.3" % Test,
       // Spark shaded jetty is not resolved in scala 2.11
       // Described in https://issues.apache.org/jira/browse/SPARK-18162?focusedCommentId=15818123#comment-15818123
